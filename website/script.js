@@ -76,3 +76,67 @@ if (navToggle && mobileMenu) {
         }
     });
 }
+
+
+const downloadNoticeEl = document.getElementById('downloadNotice');
+
+function escapeHtml(value) {
+    return String(value)
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+}
+
+function renderDownloadNotice(data) {
+    if (!downloadNoticeEl || !data) {
+        return;
+    }
+
+    const changelogs = Array.isArray(data.changelogs) ? data.changelogs : [];
+    const v7a = data.downloads && data.downloads.v7a ? data.downloads.v7a : null;
+    const v8a = data.downloads && data.downloads.v8a ? data.downloads.v8a : null;
+
+    downloadNoticeEl.innerHTML = `
+        <div class="notice-head">
+            <h3>PawGram ${escapeHtml(data.version || '')}</h3>
+            <p>${escapeHtml(data.title || '')}</p>
+        </div>
+        <div class="notice-chip">
+            <span>Base: ${escapeHtml(data.base || '')}</span>
+        </div>
+        <p class="notice-arch">Architecture: ${escapeHtml(data.architecture || '')}</p>
+        <h4>Changelogs:</h4>
+        <ul class="notice-changelogs">
+            ${changelogs.map(item => `<li>${escapeHtml(item)}</li>`).join('')}
+        </ul>
+        <div class="notice-actions">
+            ${v7a && v7a.url ? `<a class="btn btn-primary" href="${escapeHtml(v7a.url)}" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> ${escapeHtml(v7a.label || 'v7a')}</a>` : ''}
+            ${v8a && v8a.url ? `<a class="btn btn-primary" href="${escapeHtml(v8a.url)}" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> ${escapeHtml(v8a.label || 'v8a')}</a>` : ''}
+        </div>
+    `;
+}
+
+async function loadDownloadNotice() {
+    if (!downloadNoticeEl) {
+        return;
+    }
+
+    try {
+        const response = await fetch('download-notice.json', { cache: 'no-store' });
+        if (!response.ok) {
+            throw new Error('Failed to fetch download notice JSON');
+        }
+
+        const data = await response.json();
+        renderDownloadNotice(data);
+    } catch (error) {
+        downloadNoticeEl.innerHTML = `
+            <h3>Latest Build Notice</h3>
+            <p class="notice-loading">Could not load notice JSON. Update <code>download-notice.json</code> and ensure it is served from the same directory.</p>
+        `;
+    }
+}
+
+loadDownloadNotice();
