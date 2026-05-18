@@ -63,7 +63,7 @@ PawGram includes built-in iOS-style emoji rendering for Instagram usage.
 
 ⚠ **Important Notice**
 
-Official PawGram builds are currently distributed through our verified community channel:
+Official PawGram builds are currently distributed through our Telegram Community:
 
 👉 https://t.me/pawgramapp
 
