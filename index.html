@@ -2,13 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <title>PawGram</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+<!-- Web Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -16,14 +21,24 @@
 }
 
 :root{
-    --bg:#0b0b0f;
-    --card:#121218;
-    --card2:#171720;
+
+    --bg:#0f0f13;
+    --card:#17171f;
+    --card2:#1f1f29;
     --text:#ffffff;
-    --muted:#9ca3af;
-    --accent:#ff2d75;
-    --accent2:#ff6aa6;
+    --muted:#b3b3c2;
     --border:rgba(255,255,255,.08);
+
+    /* Instagram Gradient */
+    --ig1:#f58529;
+    --ig2:#dd2a7b;
+    --ig3:#8134af;
+    --ig4:#515bd4;
+
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -33,13 +48,16 @@ body{
     overflow-x:hidden;
 }
 
+/* Background Glow */
+
 body::before{
     content:"";
     position:fixed;
     inset:0;
     background:
-    radial-gradient(circle at top left, rgba(255,45,117,.18), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(255,106,166,.15), transparent 30%);
+    radial-gradient(circle at top left, rgba(245,133,41,.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(221,42,123,.16), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(81,91,212,.16), transparent 30%);
     z-index:-1;
 }
 
@@ -53,47 +71,49 @@ a{
     margin:auto;
 }
 
+/* Navbar */
+
 nav{
     position:fixed;
     width:100%;
     top:0;
-    z-index:1000;
-    backdrop-filter:blur(16px);
-    background:rgba(10,10,14,.55);
+    z-index:999;
+    backdrop-filter:blur(18px);
+    background:rgba(12,12,16,.55);
     border-bottom:1px solid var(--border);
 }
 
 .nav-wrapper{
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
     padding:18px 0;
 }
 
 .logo{
     display:flex;
     align-items:center;
-    gap:12px;
-    font-size:1.3rem;
+    gap:14px;
+    font-size:1.4rem;
     font-weight:800;
 }
 
 .logo img{
-    width:42px;
-    height:42px;
-    border-radius:14px;
+    width:46px;
+    height:46px;
+    border-radius:16px;
 }
 
 .nav-links{
     display:flex;
-    gap:28px;
+    gap:30px;
     align-items:center;
 }
 
 .nav-links a{
     color:var(--muted);
-    font-weight:500;
     transition:.25s;
+    font-weight:500;
 }
 
 .nav-links a:hover{
@@ -101,55 +121,97 @@ nav{
 }
 
 .btn{
-    padding:12px 22px;
-    border-radius:14px;
-    background:linear-gradient(135deg,var(--accent),var(--accent2));
-    color:#fff;
-    font-weight:700;
-    transition:.3s;
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    gap:8px;
+    gap:10px;
+
+    padding:14px 24px;
+    border-radius:16px;
+    font-weight:700;
+
+    background:linear-gradient(
+    135deg,
+    var(--ig1),
+    var(--ig2),
+    var(--ig3),
+    var(--ig4));
+
+    color:#fff;
+
+    transition:.35s;
 }
 
 .btn:hover{
-    transform:translateY(-2px);
-    box-shadow:0 10px 25px rgba(255,45,117,.3);
+    transform:translateY(-3px);
+    box-shadow:0 15px 40px rgba(221,42,123,.35);
 }
+
+.btn.secondary{
+    background:transparent;
+    border:1px solid var(--border);
+}
+
+.btn.secondary:hover{
+    background:rgba(255,255,255,.05);
+}
+
+/* Hero */
 
 .hero{
     min-height:100vh;
     display:flex;
     align-items:center;
-    padding-top:90px;
+    padding-top:110px;
 }
 
 .hero-wrapper{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:70px;
+    gap:80px;
     align-items:center;
 }
 
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:12px 18px;
+    border-radius:999px;
+
+    background:rgba(255,255,255,.05);
+    border:1px solid var(--border);
+
+    margin-bottom:28px;
+    color:#fff;
+}
+
 .hero-text h1{
-    font-size:4.2rem;
+    font-size:4.4rem;
     line-height:1.05;
-    margin-bottom:22px;
+    margin-bottom:24px;
     font-weight:800;
 }
 
 .gradient{
-    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    background:linear-gradient(
+    135deg,
+    var(--ig1),
+    var(--ig2),
+    var(--ig3),
+    var(--ig4));
+
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
 
 .hero-text p{
     color:var(--muted);
+    line-height:1.9;
     font-size:1.08rem;
-    line-height:1.8;
-    margin-bottom:32px;
+    margin-bottom:34px;
+    max-width:620px;
 }
 
 .hero-buttons{
@@ -158,49 +220,32 @@ nav{
     flex-wrap:wrap;
 }
 
-.secondary{
-    background:transparent;
-    border:1px solid var(--border);
-}
-
-.secondary:hover{
-    background:rgba(255,255,255,.04);
-}
-
 .hero-image{
-    position:relative;
     display:flex;
     justify-content:center;
+    position:relative;
 }
 
 .phone{
-    width:320px;
+    width:330px;
+    padding:14px;
     border-radius:42px;
-    border:1px solid var(--border);
-    background:linear-gradient(180deg,#1b1b24,#111116);
-    padding:16px;
+
+    background:linear-gradient(180deg,#242430,#171720);
+
+    border:1px solid rgba(255,255,255,.08);
+
     box-shadow:
-    0 0 80px rgba(255,45,117,.15),
-    0 30px 80px rgba(0,0,0,.6);
+    0 0 90px rgba(221,42,123,.18),
+    0 30px 80px rgba(0,0,0,.55);
 }
 
 .phone img{
     width:100%;
-    border-radius:28px;
+    border-radius:30px;
 }
 
-.badge{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    background:rgba(255,255,255,.05);
-    border:1px solid var(--border);
-    padding:10px 16px;
-    border-radius:999px;
-    margin-bottom:28px;
-    color:#fff;
-    font-size:.95rem;
-}
+/* Sections */
 
 .section{
     padding:110px 0;
@@ -212,57 +257,73 @@ nav{
 }
 
 .section-title h2{
-    font-size:2.8rem;
+    font-size:3rem;
     margin-bottom:18px;
 }
 
 .section-title p{
     color:var(--muted);
-    max-width:700px;
+    max-width:760px;
     margin:auto;
     line-height:1.8;
 }
 
+/* Features */
+
 .features{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:24px;
+    gap:26px;
 }
 
 .card{
+    padding:34px;
+    border-radius:30px;
+
     background:linear-gradient(180deg,var(--card),var(--card2));
+
     border:1px solid var(--border);
-    border-radius:28px;
-    padding:32px;
+
     transition:.35s;
 }
 
 .card:hover{
-    transform:translateY(-6px);
-    border-color:rgba(255,45,117,.4);
+    transform:translateY(-8px);
+    border-color:rgba(221,42,123,.35);
 }
 
 .card-icon{
-    width:60px;
-    height:60px;
-    border-radius:18px;
-    background:rgba(255,45,117,.12);
+    width:68px;
+    height:68px;
+
+    border-radius:22px;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     font-size:1.6rem;
+
+    background:linear-gradient(
+    135deg,
+    rgba(245,133,41,.18),
+    rgba(221,42,123,.18),
+    rgba(129,52,175,.18));
+    
     margin-bottom:24px;
 }
 
 .card h3{
+    font-size:1.35rem;
     margin-bottom:14px;
-    font-size:1.3rem;
 }
 
 .card p{
     color:var(--muted);
-    line-height:1.7;
+    line-height:1.8;
 }
+
+/* Preview */
 
 .gallery{
     display:grid;
@@ -272,7 +333,7 @@ nav{
 
 .gallery img{
     width:100%;
-    border-radius:30px;
+    border-radius:32px;
     border:1px solid var(--border);
     transition:.35s;
 }
@@ -281,12 +342,23 @@ nav{
     transform:translateY(-8px);
 }
 
+/* CTA */
+
 .cta{
     text-align:center;
-    padding:100px 30px;
-    background:linear-gradient(180deg,var(--card),var(--card2));
+
+    padding:100px 40px;
+
     border-radius:40px;
-    border:1px solid var(--border);
+
+    background:
+    linear-gradient(
+    135deg,
+    rgba(245,133,41,.12),
+    rgba(221,42,123,.12),
+    rgba(129,52,175,.12));
+
+    border:1px solid rgba(255,255,255,.08);
 }
 
 .cta h2{
@@ -296,15 +368,17 @@ nav{
 
 .cta p{
     color:var(--muted);
-    max-width:700px;
-    margin:auto auto 35px;
-    line-height:1.8;
+    line-height:1.9;
+    max-width:760px;
+    margin:auto auto 34px;
 }
 
+/* Footer */
+
 footer{
-    padding:50px 0;
+    padding:55px 0;
     border-top:1px solid var(--border);
-    margin-top:100px;
+    margin-top:90px;
 }
 
 .footer-wrapper{
@@ -318,12 +392,18 @@ footer{
 .footer-links{
     display:flex;
     gap:20px;
+}
+
+.footer-links a{
     color:var(--muted);
+    transition:.25s;
 }
 
 .footer-links a:hover{
     color:#fff;
 }
+
+/* Responsive */
 
 @media(max-width:980px){
 
@@ -334,6 +414,10 @@ footer{
 
 .hero-buttons{
     justify-content:center;
+}
+
+.hero-text p{
+    margin-inline:auto;
 }
 
 .features{
@@ -361,7 +445,7 @@ footer{
 }
 
 .hero-text h1{
-    font-size:2.6rem;
+    font-size:2.5rem;
 }
 
 .section-title h2,
@@ -375,213 +459,280 @@ footer{
 }
 
 }
+
 </style>
 </head>
 
 <body>
 
 <nav>
-    <div class="container nav-wrapper">
 
-        <div class="logo">
-            <img src="https://raw.githubusercontent.com/pawjects/PawGram/main/website/assets/logo.png">
-            PawGram
-        </div>
+<div class="container nav-wrapper">
 
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#features">Features</a>
-            <a href="#preview">Preview</a>
-            <a href="https://github.com/pawjects/PawGram">GitHub</a>
-        </div>
-
-        <a href="https://github.com/pawjects/PawGram/releases" class="btn">
-            Download
-        </a>
-
+    <div class="logo">
+        <img src="https://raw.githubusercontent.com/pawjects/PawGram/main/website/assets/logo.png">
+        PawGram
     </div>
+
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#features">Features</a>
+        <a href="#preview">Preview</a>
+        <a href="https://pawgram-meow.vercel.app/">Website</a>
+    </div>
+
+    <a href="#" class="btn">
+        <i class="bi bi-download"></i>
+        Download
+    </a>
+
+</div>
+
 </nav>
 
 <section class="hero">
-    <div class="container hero-wrapper">
 
-        <div class="hero-text">
+<div class="container hero-wrapper">
 
-            <div class="badge">
-                🐾 Modern Instagram Alpha Fork
-            </div>
+    <div class="hero-text">
 
-            <h1>
-                Experience Instagram
-                <span class="gradient">Better</span>
-            </h1>
-
-            <p>
-                PawGram is a refined Instagram fork built for speed,
-                customization, smooth performance, and a cleaner social
-                experience across both modern and legacy Android devices.
-            </p>
-
-            <div class="hero-buttons">
-                <a href="https://github.com/pawjects/PawGram/releases" class="btn">
-                    Download APK
-                </a>
-
-                <a href="https://github.com/pawjects/PawGram" class="btn secondary">
-                    View Source
-                </a>
-            </div>
-
+        <div class="badge">
+            <i class="bi bi-instagram"></i>
+            Instagram Alpha Fork
         </div>
 
-        <div class="hero-image">
-            <div class="phone">
-                <img src="https://raw.githubusercontent.com/pawjects/PawGram/main/website/assets/preview1.png">
-            </div>
-        </div>
+        <h1>
+            Experience Instagram
+            <span class="gradient">Without Limits</span>
+        </h1>
 
-    </div>
-</section>
+        <p>
+            PawGram delivers a cleaner, faster, and more customizable Instagram
+            experience with modern aesthetics, optimized performance, iOS emojis,
+            and enhanced usability for every Android device.
+        </p>
 
-<section class="section" id="features">
+        <div class="hero-buttons">
 
-    <div class="container">
+            <a href="#" class="btn">
+                <i class="bi bi-download"></i>
+                Download APK
+            </a>
 
-        <div class="section-title">
-            <h2>Why Choose PawGram?</h2>
-            <p>
-                Crafted for users who want a faster, cleaner, and more customizable
-                Instagram experience without unnecessary bloat.
-            </p>
-        </div>
-
-        <div class="features">
-
-            <div class="card">
-                <div class="card-icon">⚡</div>
-                <h3>Optimized Performance</h3>
-                <p>
-                    Smooth scrolling, faster loading times, and improved responsiveness
-                    for both high-end and low-end Android devices.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="card-icon">🎨</div>
-                <h3>Cleaner UI</h3>
-                <p>
-                    Modernized interface improvements with refined aesthetics and
-                    distraction-free navigation.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="card-icon">🛡️</div>
-                <h3>Ad-Free Experience</h3>
-                <p>
-                    Enjoy Instagram with reduced clutter and a cleaner content browsing
-                    experience.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="card-icon">🍎</div>
-                <h3>iOS Emojis</h3>
-                <p>
-                    Built-in iOS emoji support for a more premium and expressive
-                    chatting experience.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="card-icon">📱</div>
-                <h3>Legacy Support</h3>
-                <p>
-                    Designed to work smoothly even on older Android versions and
-                    unsupported devices.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="card-icon">🐾</div>
-                <h3>Community Driven</h3>
-                <p>
-                    Open-source project maintained and improved by the PawDevs
-                    community.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="section" id="preview">
-
-    <div class="container">
-
-        <div class="section-title">
-            <h2>Application Preview</h2>
-            <p>
-                Elegant interface, optimized visuals, and a modern Instagram experience.
-            </p>
-        </div>
-
-        <div class="gallery">
-
-            <img src="https://raw.githubusercontent.com/pawjects/PawGram/main/website/assets/preview1.png">
-
-            <img src="https://raw.githubusercontent.com/pawjects/PawGram/main/website/assets/preview2.png">
-
-            <img src="https://raw.githubusercontent.com/pawjects/PawGram/main/website/assets/preview3.png">
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="section">
-
-    <div class="container">
-
-        <div class="cta">
-
-            <h2>Download PawGram Today</h2>
-
-            <p>
-                Upgrade your Instagram experience with improved performance,
-                enhanced customization, and a beautifully refined interface.
-            </p>
-
-            <a href="https://github.com/pawjects/PawGram/releases" class="btn">
-                Get Latest Release
+            <a href="#" class="btn secondary">
+                <i class="bi bi-stars"></i>
+                Explore Features
             </a>
 
         </div>
 
     </div>
 
-</section>
+    <div class="hero-image">
 
-<footer>
-
-    <div class="container footer-wrapper">
-
-        <div>
-            © 2026 PawGram • Crafted with 🐾 by PawDevs
-        </div>
-
-        <div class="footer-links">
-            <a href="https://github.com/pawjects/PawGram">GitHub</a>
-            <a href="https://pawgram-meow.vercel.app/">Website</a>
-            <a href="https://t.me/PawDevs">Telegram</a>
+        <div class="phone">
+            <img src="https://raw.githubusercontent.com/pawjects/PawGram/main/website/assets/preview1.png">
         </div>
 
     </div>
 
+</div>
+
+</section>
+
+<section class="section" id="features">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <h2>Designed for Better Social Experience</h2>
+
+        <p>
+            Every part of PawGram is crafted to feel cleaner, smoother,
+            and more enjoyable while preserving the familiar Instagram experience.
+        </p>
+
+    </div>
+
+    <div class="features">
+
+        <div class="card">
+
+            <div class="card-icon">
+                <i class="bi bi-lightning-charge-fill"></i>
+            </div>
+
+            <h3>Optimized Performance</h3>
+
+            <p>
+                Faster loading times, smoother animations, and responsive
+                navigation optimized for all Android devices.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-icon">
+                <i class="bi bi-palette-fill"></i>
+            </div>
+
+            <h3>Modern Interface</h3>
+
+            <p>
+                Refined visual improvements inspired by modern mobile
+                application aesthetics and clean layouts.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-icon">
+                <i class="bi bi-emoji-smile-fill"></i>
+            </div>
+
+            <h3>iOS Emojis</h3>
+
+            <p>
+                Built-in iOS emoji support for a premium and expressive
+                messaging experience across the app.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-icon">
+                <i class="bi bi-shield-fill-check"></i>
+            </div>
+
+            <h3>Cleaner Browsing</h3>
+
+            <p>
+                Reduced clutter and unnecessary distractions for a more
+                focused and enjoyable social feed experience.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-icon">
+                <i class="bi bi-phone-fill"></i>
+            </div>
+
+            <h3>Legacy Device Support</h3>
+
+            <p>
+                Enhanced compatibility and performance tuning for older
+                Android versions and low-end devices.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-icon">
+                <i class="bi bi-heart-fill"></i>
+            </div>
+
+            <h3>Community Driven</h3>
+
+            <p>
+                Open-source development powered by PawDevs and supported
+                by a passionate Android customization community.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<section class="section" id="preview">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <h2>Beautiful & Smooth Interface</h2>
+
+        <p>
+            Built with modern visuals and optimized layouts inspired by
+            Instagram's premium design language.
+        </p>
+
+    </div>
+
+    <div class="gallery">
+
+        <img src="https://raw.githubusercontent.com/pawjects/PawGram/main/website/assets/preview1.png">
+
+        <img src="https://raw.githubusercontent.com/pawjects/PawGram/main/website/assets/preview2.png">
+
+        <img src="https://raw.githubusercontent.com/pawjects/PawGram/main/website/assets/preview3.png">
+
+    </div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+    <div class="cta">
+
+        <h2>Upgrade Your Instagram Experience</h2>
+
+        <p>
+            Discover a faster, cleaner, and visually refined Instagram
+            experience crafted specifically for Android users.
+        </p>
+
+        <a href="#" class="btn">
+            <i class="bi bi-download"></i>
+            Get PawGram
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container footer-wrapper">
+
+    <div>
+        © 2026 PawGram • Crafted with 🐾 by PawDevs
+    </div>
+
+    <div class="footer-links">
+
+        <a href="#">
+            <i class="bi bi-instagram"></i>
+        </a>
+
+        <a href="#">
+            <i class="bi bi-telegram"></i>
+        </a>
+
+        <a href="#">
+            <i class="bi bi-globe"></i>
+        </a>
+
+    </div>
+
+</div>
+
 </footer>
 
 </body>
-  </html>
+</html>
