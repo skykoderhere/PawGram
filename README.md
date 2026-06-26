@@ -1,8 +1,8 @@
 # 🐾 PawGram
 
-### Optimized Instagram Experience for Legacy & Modern Android Devices
+**An Optimized Instagram Experience for Legacy & Modern Android Devices**
 
-PawGram is a performance-focused, community-driven Android project built to deliver a smoother and more stable **Instagram experience** — especially on devices no longer supported by newer official releases.
+PawGram is a performance-focused, community-driven Android project engineered to deliver a smoother, highly stable Instagram experience—specifically tailored to breathe life into devices no longer supported by newer official releases.
 
 Developed with 🐾 by **PawDevs**.
 
@@ -10,111 +10,88 @@ Developed with 🐾 by **PawDevs**.
 
 ## 🎯 Overview
 
-PawGram was originally created to improve **Instagram usability on legacy 32-bit Android devices**.
+Originally conceptualized to resolve Instagram usability issues on legacy 32-bit Android hardware, PawGram has evolved into a comprehensive solution supporting both **32-bit and 64-bit architectures**. It guarantees broad compatibility across a diverse spectrum of Android devices.
 
-With ongoing development, PawGram now supports both **32-bit and 64-bit architectures**, ensuring compatibility across a wide range of Android hardware.
-
-The project focuses on:
-
-- ⚡ Instagram performance optimization
-- 🛡 Improved stability
-- 🧹 Lightweight and clean user experience
-- 📱 Long-term compatibility for unsupported devices
-- 🤝 Community-driven updates
+Our development philosophy prioritizes:
+*   **⚡ Performance Optimization:** Fluid navigation and reduced latency.
+*   **🛡️ Enhanced Stability:** Fewer crashes and consistent uptime.
+*   **🧹 Resource Efficiency:** A lightweight footprint with minimized background overhead.
+*   **📱 Legacy Support:** Long-term functionality for unsupported hardware.
+*   **🤝 Community-Driven Evolution:** Updates shaped by user feedback.
 
 ---
 
 ## ✨ Key Features
 
-- 🎨 **Pre-Integrated iOS-Style Emoji Support**
-  Enjoy iOS-style emojis directly inside Instagram without external emoji packs or root access.
-
-- ⚡ Optimized Instagram performance for low-resource devices  
-- 🔄 Smoother scrolling and improved responsiveness  
-- 🧠 Reduced background overhead  
-- 📱 Clean and lightweight UI  
-- 🧩 Compatible with both 32-bit (ARMv7) and 64-bit (ARM64) Android devices  
+*   **🎨 Native iOS Emoji Rendering**
+    Experience seamless iOS-style emojis directly within the app. Works natively across chats, comments, captions, and stories—no external emoji packs, specialized keyboards, or root access required.
+*   **⚡ Device Optimization**
+    Specifically tuned to maximize performance on low-resource and aging hardware.
+*   **🔄 Fluid UI Interaction**
+    Engineered for smoother scrolling and enhanced touch responsiveness.
+*   **🧠 Minimized Overhead**
+    Aggressive background resource management to preserve battery life and RAM.
 
 ---
 
 ## 🧩 Architecture Support
 
-| Architecture | Support |
-|--------------|----------|
-| 32-bit (ARMv7) | ✅ Supported |
-| 64-bit (ARM64) | ✅ Supported |
+PawGram is compiled to ensure maximum device compatibility across modern and legacy instruction sets.
 
----
-
-## 🎨 Emoji Experience
-
-PawGram includes built-in iOS-style emoji rendering for Instagram usage.
-
-### Included:
-
-- Native iOS emoji styling
-- Works across chats, comments, captions, and stories
-- No additional setup required
-- Consistent emoji appearance across Android versions
+| Architecture | Status | Description |
+| :--- | :---: | :--- |
+| **32-bit (ARMv7)** | ✅ Supported | Optimized for legacy and low-end devices. |
+| **64-bit (ARM64)** | ✅ Supported | High-performance build for modern hardware. |
 
 ---
 
 ## 📥 App Releases & Distribution
 
-⚠ **Important Notice**
+> **⚠️ Important Notice**
+> 
+> Official PawGram release builds are currently distributed exclusively through our Telegram Community. Future stable releases may also be mirrored via GitHub Releases. **Always ensure you are downloading from official PawDevs sources to guarantee application integrity.**
 
-Official PawGram builds are currently distributed through our Telegram Community:
-
-👉 https://t.me/pawgramapp
-
-Future builds may also be published via GitHub Releases.
-
-Always download from official sources only.
+👉 **[Join the Official PawGram Telegram](https://t.me/pawgramapp)**
 
 ---
 
-## 🛠 Installation
+## 🛠️ Installation Guide
 
-1. Download the latest PawGram APK
-2. Enable **Install Unknown Apps**
-3. Install the APK
-4. Log in with your Instagram account
+1. **Download:** Obtain the latest PawGram `.apk` from our official Telegram channel.
+2. **Permissions:** Navigate to your Android settings and enable **Install Unknown Apps** for your browser or file manager.
+3. **Install:** Tap the downloaded APK file and follow the on-screen prompts to install.
+4. **Launch:** Open PawGram and log in securely with your standard Instagram credentials.
 
 ---
 
 ## 🐞 Bug Reports & Feedback
 
-Share issues through:
+Your feedback drives PawGram's development. If you encounter an issue, please report it via our [GitHub Issues](#) tracker or the official Telegram Community. 
 
-- GitHub Issues
-- Official Telegram Community
-
-Please include:
-- Device model
-- Android version
-- App version
-- Steps to reproduce
+To help us resolve issues quickly, please include the following details in your report:
+*   **Device Model** (e.g., Samsung Galaxy S8)
+*   **Android Version** (e.g., Android 9.0)
+*   **PawGram Version** (e.g., v1.0.5)
+*   **Steps to Reproduce** (A clear, step-by-step guide to triggering the bug)
 
 ---
 
-## ⚠ Disclaimer
+## ⚖️ Disclaimer
 
-PawGram is an independent Android project.
+PawGram is an independent, community-driven open-source Android project. 
 
-- It is **not affiliated with, endorsed by, or connected to Instagram or Meta Platforms, Inc.**
-- Instagram is a trademark of Meta Platforms, Inc.
-- Users are responsible for complying with Instagram's Terms of Service.
+*   It is **strictly not affiliated with, endorsed by, sponsored by, or connected to Instagram or Meta Platforms, Inc.**
+*   "Instagram" is a registered trademark of Meta Platforms, Inc.
+*   Users remain solely responsible for ensuring their usage complies with Instagram's official Terms of Service.
 
-If you are a rights holder and have concerns, please contact us for discussion.
+*For inquiries regarding intellectual property or rights management, please open an issue or contact the repository maintainers directly.*
 
 ---
 
 ## 💙 Credits
 
-Developed with 🐾 by **PawDevs**
+Designed and maintained with 🐾 by **PawDevs**. 
 
-Thanks to all community testers and contributors.
+A special thank you to our community testers and contributors for making this project possible. 
 
----
-
-**PawGram — Optimizing Instagram for every Android device. 🐾✨**
+**PawGram — Optimizing the social experience for every Android device. 🐾✨**
