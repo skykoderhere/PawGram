@@ -1,7 +1,7 @@
 {
-  "version": "v26",
+  "version": "v27",
   "title": "Base Update + iOS Emojis",
-  "base": "437.0.0.0.1",
+  "base": "438.0.0.0.0",
   "architecture": "armv7a + armv8a",
   "changelogs": [
     "Ads Removed",
@@ -12,11 +12,11 @@
   "downloads": {
     "v7a": {
       "label": "v7a",
-      "url": "https://zdrive.to/2WVGr8p03kx7"
+      "url": "https://zdrive.to/5pVzNAgZ37wv"
     },
     "v8a": {
       "label": "v8a",
-      "url": "https://zdrive.to/EL73g0nyz9Ba"
+      "url": "https://zdrive.to/9AqGQZJJmMn6"
     }
   }
 }
