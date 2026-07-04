@@ -180,7 +180,7 @@ function renderNav(activeId) {
     return `
     <nav>
         <a class="logo" href="#home" aria-label="PawGram Home">
-            <img src="https://raw.githubusercontent.com/pawjects/PawGram/refs/heads/main/assets/pawgram_circle.png" alt="PawGram Logo" width="32" height="32">
+            <img src="https://raw.githubusercontent.com/pawjects/PawGram/refs/heads/meow/assets/new_logo.png" alt="PawGram Logo" width="32" height="32">
             PawGram
         </a>
         <div class="nav-links">${navLinks}</div>
