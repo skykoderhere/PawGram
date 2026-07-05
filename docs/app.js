@@ -41,11 +41,11 @@ const pages = {
             </div>
         </section>
         <section class="community fade-up">
-            <h2>Built with the community.<br>Maintained by PawDevs.</h2>
+            <h2>Built with the community.<br>Maintained by PAWJECTS.</h2>
             <p>Follow releases, feature announcements, and improvements from the core team.</p>
             <div class="btn-group">
                 <a href="https://t.me/pawgramapp" target="_blank" rel="noopener" class="btn btn-primary"><i class="fa-brands fa-telegram"></i> Join Channel</a>
-                <a href="#about-devs" class="btn btn-secondary"><i class="fa-solid fa-users"></i> Meet PawDevs</a>
+                <a href="#about-devs" class="btn btn-secondary"><i class="fa-solid fa-users"></i> Meet PAWJECTS</a>
             </div>
         </section>
     `,
@@ -137,8 +137,8 @@ const pages = {
     `,
     'about-devs': `
         <header class="hero fade-up">
-            <div class="hero-badge"><i class="fa-solid fa-users"></i> PawDevs Team</div>
-            <h1>Community-first development<br>by <span>PawDevs.</span></h1>
+            <div class="hero-badge"><i class="fa-solid fa-users"></i> PAWJECTS Team</div>
+            <h1>Community-first development<br>by <span>PAWJECTS.</span></h1>
             <p>PawGram is built and maintained by a contributor-driven team focused on quality Android experiences.</p>
         </header>
         <section class="features">
@@ -162,7 +162,7 @@ const pages = {
             </div>
         </section>
         <section class="community fade-up">
-            <h2>Connect with PawDevs</h2>
+            <h2>Connect with PAWJECTS</h2>
             <p>Join the team spaces for support, announcements, and collaboration.</p>
             <div class="btn-group">
                 <a href="https://t.me/pawgramapp" target="_blank" rel="noopener" class="btn btn-primary"><i class="fa-brands fa-telegram"></i> PawGram Community </a>
@@ -180,7 +180,9 @@ function renderNav(activeId) {
     return `
     <nav>
         <a class="logo" href="#home" aria-label="PawGram Home">
-            <img src="https://raw.githubusercontent.com/pawjects/PawGram/refs/heads/meow/assets/new_logo.png" alt="PawGram Logo" width="32" height="32">
+            <div style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 14px; background: var(--ig-gradient); box-shadow: 0 10px 30px rgba(131, 58, 180, 0.32);">
+                <i class="fa-solid fa-paw" style="color: #fff; font-size: 1.2rem;"></i>
+            </div>
             PawGram
         </a>
         <div class="nav-links">${navLinks}</div>
@@ -199,18 +201,18 @@ function renderFooter() {
     <footer class="fade-up">
         <div class="footer-links">
             <a href="https://pawjects.github.io/" target="_blank" rel="noopener" class="btn btn-secondary">
-                <i class="fa-solid fa-globe"></i> PawDevs Official Site
+                <i class="fa-solid fa-globe"></i> PAWJECTS Official Site
             </a>
             <a href="https://github.com/pawjects/PawGram" target="_blank" rel="noopener" class="btn btn-secondary">
                 <i class="fa-brands fa-github"></i> GitHub Repository
             </a>
-            <a href="https://t.me/PawDevs" target="_blank" rel="noopener" class="btn btn-secondary">
+            <a href="https://t.me/pawjects" target="_blank" rel="noopener" class="btn btn-secondary">
                 <i class="fa-brands fa-telegram"></i> Developer Channel
             </a>
         </div>
         <div class="footer-copy">
-            <p>Crafted with paw by PawDevs.</p>
-            <p>© 2026 PawDevs. PawGram is an independent community project and is not affiliated with Instagram or Meta Platforms, Inc.</p>
+            <p>Crafted with paw by PAWJECTS.</p>
+            <p>© 2026 PAWJECTS. PawGram is an independent community project and is not affiliated with Instagram or Meta Platforms, Inc.</p>
         </div>
     </footer>
     `;
