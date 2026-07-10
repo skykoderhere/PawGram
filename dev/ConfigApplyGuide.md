@@ -1,10 +1,10 @@
-# 💡 Guide to Applying Configuration in PawGram
+# 💡 Guide to Apply Config File in PawGram
 
-Welcome to the configuration setup guide for PawGram. Follow the detailed steps below to properly install and apply your custom configuration file to the app.
+Welcome to the devflags configuration setup guide for PawGram. Follow the detailed steps below to properly install and apply your custom configuration file to the app.
 
 ## 📋 Step-by-Step Instructions
 
-### 1. Download the Configuration File
+### 1. Download the Config File
 First, download your desired config file and save it locally to your device. Make sure to remember which folder it was saved to (this is usually your default *Downloads* folder).
 
 ### 2. Install the Required File Manager
@@ -26,8 +26,8 @@ For PawGram to successfully read and apply your new settings, the configuration 
 > ⚠️ **Important:** If there is already an older file named `mc_overrides.json` in this folder, you must **delete the old file first** before renaming your new one. This ensures there are no duplicate files or conflicts.
 
 ### 6. Apply Changes and Restart
-PawGram needs a completely fresh start to load the new configuration data into its memory.
-* Go to your device settings and **Force Stop** PawGram. 
+PawGram needs a completely fresh start to load the new config data into its memory.
+* Go to PawGram app info settings and **Force Stop** PawGram. 
 * **Reopen** the application.
 
-Your custom configuration is now successfully applied and ready to use!
+Your custom config file is now successfully applied and ready to use!
