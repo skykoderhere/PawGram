@@ -1,5 +1,5 @@
 {
-  "version": "v27",
+  "version": "v28",
   "title": "Base Update + iOS Emojis",
   "base": "439.0.0.0.3",
   "architecture": "armv7a + armv8a",
